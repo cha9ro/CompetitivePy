@@ -9,10 +9,10 @@ for element in line:
     xSorted.append(int(element))
 xSorted.sort()
 
-originalMedian = xSorted[int(n/2)-1]
+originalMedian = xSorted[int(n / 2) - 1]
 
 for element in x:
     if element >= originalMedian:
-        print (xSorted[int(n/2)-1])
+        print(xSorted[int(n / 2) - 1])
     else:
-        print (xSorted[int(n/2)+1])
+        print(xSorted[int(n / 2) + 1])

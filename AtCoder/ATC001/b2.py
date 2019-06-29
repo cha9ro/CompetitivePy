@@ -1,11 +1,11 @@
 def update(groupList, a, b):
     isAdded = False
     for group in groupList:
-        if a in group and not b in group:
+        if a in group and b not in group:
             group.append(b)
             isAdded = True
             break
-        elif not a in group and b in group:
+        elif a not in group and b in group:
             group.append(a)
             isAdded = True
             break
@@ -15,11 +15,13 @@ def update(groupList, a, b):
     if not isAdded:
         groupList.append([a, b])
 
+
 def isConnected(groupList, a, b):
     for group in groupList:
         if (a in group and b in group) or a == b:
             return True
     return False
+
 
 def main():
     line = input().split(' ')
@@ -44,13 +46,10 @@ def main():
             update(groupList, a, b)
         else:
             if isConnected(groupList, a, b):
-                print ('Yes')
+                print('Yes')
             else:
-                print ('No')
-    
+                print('No')
+
 
 if __name__ == '__main__':
     main()
-            
-                
-    

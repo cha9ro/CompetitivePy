@@ -15,4 +15,3 @@ for i in range(m):
     v = int(line[1])
     a = int(line[2])
     b = int(line[3])
-

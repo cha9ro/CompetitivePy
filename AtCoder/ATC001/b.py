@@ -12,16 +12,17 @@ def main():
         p[q] = int(line[0])
         a[q] = int(line[1])
         b[q] = int(line[2])
-    
+
     for q in range(Q):
         if p[q] == 0:
             graph[a[q]][b[q]] = True
             graph[b[q]][a[q]] = True
         else:
             if isConnected(graph, a[q], b[q]):
-                print ('Yes')
+                print('Yes')
             else:
-                print ('No')
+                print('No')
+
 
 def isConnected(graph, start, goal):
     N = len(graph)
@@ -39,6 +40,7 @@ def isConnected(graph, start, goal):
                     stack.append(i)
                     isVisited[i] = True
     return False
+
 
 if __name__ == '__main__':
     main()
